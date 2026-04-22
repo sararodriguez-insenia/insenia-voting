@@ -26,11 +26,9 @@ export const videos: Video[] = [
   // Reemplaza estos datos con los de tus participantes reales
   {
     id: "1",
-    youtubeId: "dQw4w9WgXcQ",
-    title: "Mi proyecto de diseño",
+    youtubeId: "BZFQ5fBLDy0",
+    title: "Participante Becas 100%",
     participant: "Ana García",
-    instagramHandle: "@anagarcia",
-    category: "Diseño Gráfico",
   },
   {
     id: "2",
