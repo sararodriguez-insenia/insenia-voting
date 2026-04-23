@@ -561,7 +561,7 @@ export default function Home() {
                 transition: 'all 0.2s',
               }}
             >
-              {tab === 'all' ? `Todos (${videos.length})` : '🏆 Top 10'}
+              {tab === 'all' ? `Todos (${videos.length})` : '🏆 Top 15'}
             </button>
           ))}
 
@@ -595,7 +595,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* TOP 10 TAB */}
+        {/* TOP 15 TAB */}
         {activeTab === 'top' && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <div style={{
