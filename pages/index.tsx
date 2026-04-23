@@ -384,8 +384,8 @@ export default function Home() {
     .sort((a, b) => b.votes - a.votes)
     .map((v, i) => ({ ...v, rank: i + 1 }));
 
-  const top10 = videosWithVotes.slice(0, 10);
-
+  const top15 = videosWithVotes.slice(0, 15);
+  
   const filteredVideos = videosWithVotes
     .filter((v) =>
       search === '' ||
@@ -497,8 +497,10 @@ export default function Home() {
             color: 'var(--white-dim)', fontSize: '1rem', maxWidth: 500, margin: '0.75rem auto 1.5rem',
             lineHeight: 1.6,
           }}>
-            ¡Apoya a los alumnos de INSENIA Design School Madrid!<br />
-            1 voto por persona al día · Los mejores subirán al ranking
+            Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100%.<br />
+            ⚠️ Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien!
+            
+            👇 En el Ranking Top 15 podrás ver lo más votados.
           </p>
 
           {voteState.hasVotedToday && (
@@ -537,7 +539,7 @@ export default function Home() {
                 fontWeight: 600, fontSize: '1rem',
               }}
             >
-              🏆 Top 10
+              🏆 Top 15
             </button>
           </div>
         </motion.div>
@@ -561,7 +563,7 @@ export default function Home() {
                 transition: 'all 0.2s',
               }}
             >
-              {tab === 'all' ? `Todos (${videos.length})` : '🏆 Top 10'}
+              {tab === 'all' ? `Todos (${videos.length})` : '🏆 Top 15'}
             </button>
           ))}
 
@@ -595,7 +597,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* TOP 10 TAB */}
+        {/* TOP 15 TAB */}
         {activeTab === 'top' && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <div style={{
@@ -610,12 +612,12 @@ export default function Home() {
                 letterSpacing: 2, color: 'var(--yellow)', marginBottom: '1.5rem',
                 display: 'flex', alignItems: 'center', gap: 12,
               }}>
-                🏆 RANKING TOP 10
+                🏆 RANKING TOP 15
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {top10.map((v, i) => {
-                  const maxVotes = top10[0]?.votes || 1;
+                {top15.map((v, i) => {
+                  const maxVotes = top15[0]?.votes || 1;
                   const pct = maxVotes > 0 ? (v.votes / maxVotes) * 100 : 0;
                   const medals = ['🥇', '🥈', '🥉'];
                   return (
