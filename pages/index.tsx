@@ -493,15 +493,12 @@ export default function Home() {
             <br />
             <span style={{ color: 'var(--white)' }}>VÍDEO FAVORITO</span>
           </div>
-          <p style={{
-            color: 'var(--white-dim)', fontSize: '1rem', maxWidth: 500, margin: '0.75rem auto 1.5rem',
-            lineHeight: 1.6,
-          }}>
-            Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100%.<br />
-            ⚠️ Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien!
-            
-            👇 En el Ranking Top 15 podrás ver lo más votados.
-          </p>
+          <p style={{ color: 'var(--white-dim)', fontSize: '1rem', maxWidth: 500, margin: '0.75rem auto 0.5rem', lineHeight: 1.6 }}>
+  Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100%.
+</p>
+<p style={{ color: 'var(--white-dim)', fontSize: '1rem', maxWidth: 500, margin: '0 auto 1.5rem', lineHeight: 1.6 }}>
+  ⚠️ Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien! 👇 En el Ranking Top 15 podrás ver lo más votados.
+</p>
 
           {voteState.hasVotedToday && (
             <motion.div
