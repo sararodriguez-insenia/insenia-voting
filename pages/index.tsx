@@ -497,8 +497,8 @@ export default function Home() {
             color: 'var(--white-dim)', fontSize: '1rem', maxWidth: 500, margin: '0.75rem auto 1.5rem',
             lineHeight: 1.6,
           }}>
-            ¡Apoya a los alumnos de INSENIA Design School Madrid!<br />
-            1 voto por persona al día · Los mejores subirán al ranking
+            Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100% de Insenia Design School Madrid !<br />
+            Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien! · En en Ranking podrás ver lo más votados.
           </p>
 
           {voteState.hasVotedToday && (
@@ -537,7 +537,7 @@ export default function Home() {
                 fontWeight: 600, fontSize: '1rem',
               }}
             >
-              🏆 Top 10
+              🏆 Top 15
             </button>
           </div>
         </motion.div>
