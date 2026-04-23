@@ -610,12 +610,12 @@ export default function Home() {
                 letterSpacing: 2, color: 'var(--yellow)', marginBottom: '1.5rem',
                 display: 'flex', alignItems: 'center', gap: 12,
               }}>
-                🏆 RANKING TOP 10
+                🏆 RANKING TOP 15
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {top10.map((v, i) => {
-                  const maxVotes = top10[0]?.votes || 1;
+                {top15.map((v, i) => {
+                  const maxVotes = top15[0]?.votes || 1;
                   const pct = maxVotes > 0 ? (v.votes / maxVotes) * 100 : 0;
                   const medals = ['🥇', '🥈', '🥉'];
                   return (
