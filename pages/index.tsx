@@ -497,8 +497,9 @@ export default function Home() {
             color: 'var(--white-dim)', fontSize: '1rem', maxWidth: 500, margin: '0.75rem auto 1.5rem',
             lineHeight: 1.6,
           }}>
-            Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100% de Insenia Design School Madrid !<br />
-            Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien! · En en Ranking podrás ver lo más votados.
+            Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100%.<br />
+            ⚠️ Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien!
+            👇 En en Ranking Top 15 podrás ver lo más votados.
           </p>
 
           {voteState.hasVotedToday && (
