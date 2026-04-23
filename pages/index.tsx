@@ -384,8 +384,8 @@ export default function Home() {
     .sort((a, b) => b.votes - a.votes)
     .map((v, i) => ({ ...v, rank: i + 1 }));
 
-  const top10 = videosWithVotes.slice(0, 10);
-
+  const top15 = videosWithVotes.slice(0, 15);
+  
   const filteredVideos = videosWithVotes
     .filter((v) =>
       search === '' ||
