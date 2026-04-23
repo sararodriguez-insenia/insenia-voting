@@ -499,7 +499,8 @@ export default function Home() {
           }}>
             Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100%.<br />
             ⚠️ Sólo podrás votar UNA VEZ AL DÍA, así que ¡elige bien!
-            👇 En en Ranking Top 15 podrás ver lo más votados.
+            
+            👇 En el Ranking Top 15 podrás ver lo más votados.
           </p>
 
           {voteState.hasVotedToday && (
