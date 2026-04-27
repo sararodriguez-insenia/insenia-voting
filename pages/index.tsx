@@ -117,8 +117,7 @@ function VideoCard({ video, votes, rank, hasVotedToday, votedForThisVideo, onVot
   const [error, setError] = useState('');
   const [hovered, setHovered] = useState(false);
   const ytId = extractYoutubeId(video.youtubeId);
-  const isTop3 = rank <= 3;
-  const medals = ['🥇', '🥈', '🥉'];
+  const isTop15 = rank <= 15;
 
   const handleVote = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -148,8 +147,8 @@ function VideoCard({ video, votes, rank, hasVotedToday, votedForThisVideo, onVot
         background: '#fff',
         borderRadius: 14,
         overflow: 'hidden',
-        border: isTop3 ? '2px solid #f5bf07' : '1.5px solid #ebebeb',
-        boxShadow: isTop3
+        border: isTop15 ? '2px solid #f5bf07' : '1.5px solid #ebebeb',
+        boxShadow: isTop15
           ? '0 4px 20px rgba(245,191,7,0.15)'
           : hovered ? '0 8px 28px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.05)',
         display: 'flex', flexDirection: 'column',
@@ -160,13 +159,13 @@ function VideoCard({ video, votes, rank, hasVotedToday, votedForThisVideo, onVot
       {rank <= 15 && (
         <div style={{
           position: 'absolute', top: 10, left: 10, zIndex: 2,
-          background: isTop3 ? '#f5bf07' : 'rgba(0,0,0,0.55)',
-          color: isTop3 ? '#1a1a1a' : '#fff',
+          background: isTop15 ? '#f5bf07' : 'rgba(0,0,0,0.55)',
+          color: '#1a1a1a',
           fontFamily: 'var(--font-display)', fontSize: '0.95rem',
           padding: '2px 9px', borderRadius: 5, fontWeight: 700,
           backdropFilter: 'blur(4px)',
         }}>
-          {medals[rank - 1] ? `${medals[rank - 1]} ${rank}` : `#${rank}`}
+          #{rank}
         </div>
       )}
 
@@ -379,7 +378,6 @@ export default function Home() {
         textAlign: 'center',
       }}>
         <motion.div initial={{ opacity: 0, y: -14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-          {/* Accent line */}
           <div style={{ width: 48, height: 4, background: '#f5bf07', borderRadius: 2, margin: '0 auto 1.5rem' }} />
 
           <div style={{
@@ -418,7 +416,7 @@ export default function Home() {
                 background: '#1a1a1a', color: '#fff', border: 'none',
                 borderRadius: 30, padding: '0.8rem 2.2rem',
                 fontWeight: 700, fontSize: '0.95rem', cursor: 'pointer',
-                boxShadow: '0 4px 14px rgba(0,0,0,0.15)', transition: 'opacity 0.15s',
+                boxShadow: '0 4px 14px rgba(0,0,0,0.15)',
               }}
             >
               Ver todos los vídeos ↓
@@ -441,7 +439,6 @@ export default function Home() {
       {/* ── MAIN ── */}
       <main style={{ maxWidth: 1280, margin: '0 auto', padding: '2rem 1.5rem 5rem', background: '#fafafa' }} ref={galleryRef}>
 
-        {/* Controls */}
         <div style={{ display: 'flex', gap: 8, marginBottom: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
           {(['all', 'top'] as const).map((tab) => (
             <button key={tab} onClick={() => setActiveTab(tab)} style={{
@@ -498,8 +495,6 @@ export default function Home() {
               {top15.map((v, i) => {
                 const maxVotes = top15[0]?.votes || 1;
                 const pct = maxVotes > 0 ? (v.votes / maxVotes) * 100 : 0;
-                const medals = ['🥇', '🥈', '🥉'];
-                const isTop3 = i < 3;
                 return (
                   <motion.div key={v.id}
                     initial={{ opacity: 0, x: -14 }}
@@ -509,17 +504,17 @@ export default function Home() {
                     onClick={() => setActiveVideo(v)}
                     style={{
                       display: 'flex', alignItems: 'center', gap: 12,
-                      background: isTop3 ? '#fffdf0' : '#fff',
+                      background: '#fff',
                       borderRadius: 10, padding: '0.75rem 1rem',
-                      border: isTop3 ? '1.5px solid #f5bf07' : '1.5px solid #ebebeb',
+                      border: '1.5px solid #ebebeb',
                       cursor: 'pointer', transition: 'all 0.18s',
                     }}
                   >
                     <div style={{
                       fontFamily: 'var(--font-display)', fontSize: '1.2rem', minWidth: 38,
-                      color: isTop3 ? '#f5bf07' : '#ccc', textAlign: 'center',
+                      color: '#f5bf07', textAlign: 'center', fontWeight: 700,
                     }}>
-                      {medals[i] || `#${i + 1}`}
+                      #{i + 1}
                     </div>
                     <img
                       src={getYoutubeThumbnail(extractYoutubeId(v.youtubeId))}
