@@ -395,7 +395,7 @@ export default function Home() {
             Ayúdanos a preseleccionar los 15 candidatos a las Becas del 100%.
           </p>
           <p style={{ color: '#555', fontSize: '1rem', maxWidth: 480, margin: '0 auto 2rem', lineHeight: 1.7 }}>
-            ⚠️ Sólo podrás votar <strong style={{ color: '#1a1a1a' }}>UNA VEZ AL DÍA</strong>, así que ¡elige bien! 👇{' '}
+            ⚠️ Sólo podrás votar <strong style={{ color: '#1a1a1a' }}>UNA VEZ AL DÍA</strong>, así que ¡elige bien!{' '}
             En el Ranking Top 15 podrás ver los más votados.
           </p>
 
