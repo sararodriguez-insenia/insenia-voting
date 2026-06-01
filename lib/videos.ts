@@ -29,6 +29,7 @@ export const videos: Video[] = [
     youtubeId: "ZZeqW4_KQqc",
     title: "María José Altuve",
     participant: "Participante Becas 100%",
+    instagramHandle: "@mariajosealtuve_",
   },
   {
     id: "2",
