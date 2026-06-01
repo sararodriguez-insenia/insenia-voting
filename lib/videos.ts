@@ -26,9 +26,9 @@ export const videos: Video[] = [
   // Reemplaza estos datos con los de tus participantes reales
   {
     id: "1",
-    youtubeId: "BZFQ5fBLDy0",
-    title: "Participante Becas 100%",
-    participant: "Ana García",
+    youtubeId: "ZZeqW4_KQqc",
+    title: "María José Altuve",
+    participant: "Participante Becas 100%",
   },
   {
     id: "2",
