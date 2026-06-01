@@ -147,10 +147,8 @@ function VideoCard({ video, votes, rank, hasVotedToday, votedForThisVideo, onVot
         background: '#fff',
         borderRadius: 14,
         overflow: 'hidden',
-        border: isTop15 ? '2px solid #f5bf07' : '1.5px solid #ebebeb',
-        boxShadow: isTop15
-          ? '0 4px 20px rgba(245,191,7,0.15)'
-          : hovered ? '0 8px 28px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.05)',
+        border: '1.5px solid #ebebeb',
+boxShadow: hovered ? '0 8px 28px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.05)',
         display: 'flex', flexDirection: 'column',
         cursor: 'pointer', position: 'relative',
         transition: 'box-shadow 0.2s',
