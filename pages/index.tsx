@@ -386,7 +386,7 @@ export default function Home() {
             letterSpacing: 2, lineHeight: 0.95, color: '#1a1a1a', marginBottom: '1.2rem',
           }}>
             VOTA POR TU<br />
-            <span style={{ color: '#f5bf07', WebkitTextStroke: '1px #e0a800' }}>VÍDEO FAVORITO</span>
+         <span style={{ color: '#f5bf07' }}>VÍDEO FAVORITO</span>
           </div>
 
           <p style={{ color: '#555', fontSize: '1rem', maxWidth: 480, margin: '0 auto 0.5rem', lineHeight: 1.7 }}>
