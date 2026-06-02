@@ -33,11 +33,10 @@ export const videos: Video[] = [
   },
   {
     id: "2",
-    youtubeId: "dQw4w9WgXcQ",
-    title: "Ilustración digital",
-    participant: "Carlos Martínez",
-    instagramHandle: "@carlosmartinez",
-    category: "Ilustración",
+    youtubeId: "5QWalzdL56Q",
+    title: "Diana Santana",
+    participant: "Participante Becas 100%",
+    instagramHandle: "@dianalsh_",
   },
   {
     id: "3",
